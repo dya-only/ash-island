@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/app.css">
+  <title>ASH ISLAND</title>
+</head>
+
+<body>
+  <audio src=""></audio>
+
+  <!-- Dynamic Island -->
+  <div class="di-container">
+    <div class="di-main">
+      <div class="menu-btn" onclick="menu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div class="test"></div>
+      <img class="di-album" src="" alt="" />
+      <div class="di-visualizer">
+        <span class="di-stick stick-1"></span>
+        <span class="di-stick stick-2"></span>
+        <span class="di-stick stick-3"></span>
+        <span class="di-stick stick-4"></span>
+        <span class="di-stick stick-5"></span>
+      </div>
+
+      <div class="di-title">Black Rose</div>
+      <div class="di-artist">ASH ISLAND</div>
+      <div class="di-progress-container">
+        <div class="di-begin">00:00</div>
+        <div class="di-progress">
+          <div class="di-bar"></div>
+        </div>
+        <div class="di-end"></div>
+      </div>
+      <button class="di-prev" onclick="diprev()">
+        <img class="di-time-img" src="./src/assets/prev15.png" alt="">
+      </button>
+
+      <button class="di-play" onclick="dipause()">
+        <img class="di-play-img" src="./src/assets/pause.png" alt="">
+      </button>
+
+      <button class="di-next" onclick="dinext()">
+        <img class="di-time-img" src="./src/assets/next15.png" alt="">
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <section class="menu-window">
+    <div class="menu-container">
+      <div class="menu-title">MENU</div>
+      <div class="menu-link" onclick="move('home')">HOME</div>
+      <div class="menu-link">MUSIC</div>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <header>
+    <img class="banner" src="" alt="">
+    <div class="container">
+      <div class="header-container">
+        <div class="header-name">ASH ISLAND</div>
+      </div>
+    </div>
+
+    <div class="title-container">
+      <h1 class="title">ASH ISLAND</h1>
+    </div>
+  </header>
+  <div class="progress"></div>
+
+  <!-- Music -->
+  <section class="music">
+    <div class="container">
+      <div class="music-container">
+
+        <!-- Album: More Roses -->
+        <div class="music-album-container">
+          <div class="album-info">
+            <img class="album-img" src="./src/assets/albums/BlackRose.jpg" alt="">
+            <div class="album-items">
+              <b class="album-title">More Roses</b>
+              <div class="album-artist">ASH ISLAND</div>
+              <div class="album-date">2023.07.27</div>
+            </div>
+          </div>
+          <div class="musics">
+            <button class="music-card" onclick="diplay('BlackRose')">
+              <img class="music-album" src="./src/assets/albums/MoreRoses.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Black Rose</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/MoreRoses.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Smoking Roses (Feat. Leellamarz)</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/MoreRoses.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Erase It</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Album: ROSE -->
+        <div class="music-album-container">
+          <div class="album-info">
+            <img class="album-img" src="./src/assets/albums/ROSE.jpg" alt="">
+            <div class="album-items">
+              <b class="album-title">Rose</b>
+              <div class="album-artist">ASH ISLAND</div>
+              <div class="album-date">2023.05.03</div>
+            </div>
+          </div>
+          <div class="musics">
+            <button class="music-card" onclick="diplay('GoodBye')">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">작별인사 (Feat. Paul Blanco)</div>
+              </div>
+            </button>
+            <button class="music-card" onclick="diplay('WONDER')">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">WONDER</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Rose In The Heart</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Trapped (Feat. Chillin Homie)</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">U Know It (Feat. Louie)</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Drop Top (Feat. The Quiett)</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">거짓말이라도</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">Bad Words (Feat. BE'O)</div>
+              </div>
+            </button>
+            <button class="music-card disable">
+              <img class="music-album" src="./src/assets/albums/ROSE.jpg" alt="" />
+              <div class="music-items">
+                <div class="music-title">시간은 왜 앞으로만 가</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="./src/app.js"></script>
+</body>
+
+</html>
