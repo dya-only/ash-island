@@ -16,6 +16,7 @@ const init = () => {
 }
 init()
 
+
 // menu
 const menuBtn = document.querySelector('.menu-btn')
 const menuWindow = document.querySelector('.menu-window')
@@ -107,7 +108,7 @@ const dipause = () => {
     diPlayImg.src = './src/assets/pause.png'
     let interval = setInterval(() => {
       diBegin.innerText = getTimeLooksModern(sec++)
-      viewSec += +selectMusic.duration / 190
+      viewSec += 100 / +selectMusic.duration
       // diProgressBar.style.width = `${sec / selectMusic.duration}%`
       diProgressBar.style.width = `${viewSec}%`
 
@@ -147,7 +148,7 @@ const diplay = async (title) => {
 
   let interval = setInterval(() => {
     diBegin.innerText = getTimeLooksModern(sec++)
-    viewSec += +selectMusic.duration / 190
+    viewSec += 100 / +selectMusic.duration
     diProgressBar.style.width = `${viewSec}%`
 
     if (sec >= +selectMusic.duration) {
@@ -263,7 +264,7 @@ const diprev = () => {
   else {
     selectMusic.currentTime -= 15
     sec -= 15
-    viewSec -= 2
+    viewSec -= 100 / 15
   }
 }
 const dinext = () => {
@@ -275,6 +276,6 @@ const dinext = () => {
   else {
     selectMusic.currentTime += 15
     sec += 15
-    viewSec += 2
+    viewSec += 100 / 15
   }
 }
